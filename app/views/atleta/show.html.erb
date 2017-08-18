@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @atletum.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @atletum.apellido %>
+</p>
+
+<p>
+  <strong>Edad:</strong>
+  <%= @atletum.edad %>
+</p>
+
+<p>
+  <strong>Kilometroscorridos:</strong>
+  <%= @atletum.kilometroscorridos %>
+</p>
+
+<p>
+  <strong>Tiempo:</strong>
+  <%= @atletum.tiempo %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @atletum.fecha %>
+</p>
+
+<%= link_to 'Edit', edit_atletum_path(@atletum) %> |
+<%= link_to 'Back', atleta_path %>

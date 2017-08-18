@@ -1,0 +1,109 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Atleta Edad</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Edad</th>
+      <th>Kilometroscorridos</th>
+      <th>Tiempo</th>
+      <th>Fecha</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @atletaEdad.each do |atletum| %>
+      <tr>
+        <td><%= atletum.nombre %></td>
+        <td><%= atletum.apellido %></td>
+        <td><%= atletum.edad %></td>
+        <td><%= atletum.kilometroscorridos %></td>
+        <td><%= atletum.tiempo %></td>
+        <td><%= atletum.fecha %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= atletaMenor = @atletaEdad.first %>
+<%= atletaMayor = @atletaEdad.last %>
+<h3>El atleta con menos edad es:</h3> <h4><%= atletaMenor.nombre %></h4>
+<h3>El atleta con mas edad es:</h3> <h4><%= atletaMayor.nombre %></h4>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Atleta Kilometros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Edad</th>
+      <th>Kilometroscorridos</th>
+      <th>Tiempo</th>
+      <th>Fecha</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @atletaKilometros.each do |atletum| %>
+      <tr>
+        <td><%= atletum.nombre %></td>
+        <td><%= atletum.apellido %></td>
+        <td><%= atletum.edad %></td>
+        <td><%= atletum.kilometroscorridos %></td>
+        <td><%= atletum.tiempo %></td>
+        <td><%= atletum.fecha %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= atletaLento = @atletaKilometros.first %>
+<%= atletaRapido = @atletaKilometros.last %>
+<h3>El atleta mas lento es:</h3> <h4><%= atletaLento.nombre %></h4>
+<h3>El atleta mas rapido es:</h3> <h4><%= atletaRapido.nombre %></h4>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Atleta Tiempo</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Edad</th>
+      <th>Kilometroscorridos</th>
+      <th>Tiempo</th>
+      <th>Fecha</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @atletaTiempo.each do |atletum| %>
+      <tr>
+        <td><%= atletum.nombre %></td>
+        <td><%= atletum.apellido %></td>
+        <td><%= atletum.edad %></td>
+        <td><%= atletum.kilometroscorridos %></td>
+        <td><%= atletum.tiempo %></td>
+        <td><%= atletum.fecha %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= atletaMenosTiempo = @atletaTiempo.first %>
+<%= atletaMayorTiempo = @atletaTiempo.last %>
+<h3>El atleta con menos condicion es:</h3> <h4><%= atletaMenosTiempo.nombre %></h4>
+<h3>El atleta con mas condicion es:</h3> <h4><%= atletaMayorTiempo.nombre %></h4>
+
+<%= link_to 'Regresar', atleta_path %>

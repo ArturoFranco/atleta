@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Atleta</h1>
+
+<table>
+  <thead>
+    <tr>
+    <th>Id</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Edad</th>
+      <th>Kilometroscorridos</th>
+      <th>Tiempo</th>
+      <th>Fecha</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @atleta.each do |atletum| %>
+      <tr>
+        <td><%= atletum.id %></td>
+        <td><%= atletum.nombre %></td>
+        <td><%= atletum.apellido %></td>
+        <td><%= atletum.edad %></td>
+        <td><%= atletum.kilometroscorridos %></td>
+        <td><%= atletum.tiempo %></td>
+        <td><%= atletum.fecha %></td>
+        <td><%= link_to 'Mirar', atletum %></td>
+        <td><%= link_to 'Editar', edit_atletum_path(atletum) %></td>
+        <td><%= link_to 'Eliminar', atletum, method: :delete, data: { confirm: 'Seguro que quiere eliminarlo?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo Atleta', new_atletum_path %>
+<%= link_to 'Reportes', atleta_reporte_path %>

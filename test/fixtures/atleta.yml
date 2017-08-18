@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  apellido: MyString
+  edad: 1
+  kilometroscorridos: 1
+  tiempo: 1.5
+  fecha: 2017-08-07
+
+two:
+  nombre: MyString
+  apellido: MyString
+  edad: 1
+  kilometroscorridos: 1
+  tiempo: 1.5
+  fecha: 2017-08-07

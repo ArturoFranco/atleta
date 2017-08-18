@@ -1,0 +1,47 @@
+<%= form_with(model: atletum, local: true) do |form| %>
+  <% if atletum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(atletum.errors.count, "error") %> prohibited this atletum from being saved:</h2>
+
+      <ul>
+      <% atletum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :atletum_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :apellido %>
+    <%= form.text_field :apellido, id: :atletum_apellido %>
+  </div>
+
+  <div class="field">
+    <%= form.label :edad %>
+    <%= form.number_field :edad, id: :atletum_edad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kilometroscorridos %>
+    <%= form.number_field :kilometroscorridos, id: :atletum_kilometroscorridos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tiempo %>
+    <%= form.text_field :tiempo, id: :atletum_tiempo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha %>
+    <%= form.date_select :fecha, id: :atletum_fecha %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
